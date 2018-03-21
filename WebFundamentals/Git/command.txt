@@ -1,0 +1,8 @@
+mkdir: making new folder
+rmdir: remove empty directiory 
+cd: navigate to new directory 
+cd .. : back to previous directory 
+rm -rf: remove non empty directory
+mv: move and rename file 
+touch: create new file 
+/bin/bash: q: command not found

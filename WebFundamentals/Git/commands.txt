@@ -1,0 +1,134 @@
+mandeeps-MacBook-Pro:Git amansingh$ cd
+Amandeeps-MacBook-Pro:~ amansingh$ cd desktop
+Amandeeps-MacBook-Pro:desktop amansingh$ mkdir gittest
+Amandeeps-MacBook-Pro:desktop amansingh$ cd gittest
+Amandeeps-MacBook-Pro:gittest amansingh$ git init
+Initialized empty Git repository in /Users/amansingh/Desktop/gittest/.git/
+Amandeeps-MacBook-Pro:gittest amansingh$ touch index.html style.css aboutMe.txt
+Amandeeps-MacBook-Pro:gittest amansingh$ git add .
+Amandeeps-MacBook-Pro:gittest amansingh$ git commit -m 'first commit'
+[master (root-commit) 1b24d85] first commit
+ Committer: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 style.css
+Amandeeps-MacBook-Pro:gittest amansingh$ ls
+aboutMe.txt	index.html	style.css
+Amandeeps-MacBook-Pro:gittest amansingh$ vi aboutMe.txt
+Amandeeps-MacBook-Pro:gittest amansingh$ vi aboutMe.txt
+Amandeeps-MacBook-Pro:gittest amansingh$ git add .
+Amandeeps-MacBook-Pro:gittest amansingh$ git commit -m 'added favorite movie to aboutMe'
+[master b1447f6] added favorite movie to aboutMe
+ Committer: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 insertions(+)
+Amandeeps-MacBook-Pro:gittest amansingh$ git diff
+Amandeeps-MacBook-Pro:gittest amansingh$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+Amandeeps-MacBook-Pro:gittest amansingh$ git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+Amandeeps-MacBook-Pro:gittest amansingh$ git log
+commit b1447f68834d6e84f6385507752bbffc53f4065d
+Author: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Date:   Tue Mar 20 11:28:58 2018 -0700
+
+    added favorite movie to aboutMe
+
+commit 1b24d853ba08c1a7f5a527139a013e511c259484
+Author: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Date:   Tue Mar 20 11:19:38 2018 -0700
+
+    first commit
+Amandeeps-MacBook-Pro:gittest amansingh$ git revert b1447f68834d6e84f6385507752bbffc53f4065d
+[master 33dd7c1] Revert "added favorite movie to aboutMe"
+ Committer: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 deletions(-)
+ rewrite aboutMe.txt (100%)
+Amandeeps-MacBook-Pro:gittest amansingh$ git status
+On branch master
+nothing to commit, working tree clean
+Amandeeps-MacBook-Pro:gittest amansingh$ ls
+aboutMe.txt	index.html	style.css
+Amandeeps-MacBook-Pro:gittest amansingh$ vi aboutMe.txt
+Amandeeps-MacBook-Pro:gittest amansingh$ git log
+commit 33dd7c192c39bccb0765728f3c8b0887ba333bc6
+Author: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Date:   Tue Mar 20 11:32:26 2018 -0700
+
+    Revert "added favorite movie to aboutMe"
+    
+    This reverts commit b1447f68834d6e84f6385507752bbffc53f4065d.
+    
+    'removed the movie'
+
+commit b1447f68834d6e84f6385507752bbffc53f4065d
+Author: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Date:   Tue Mar 20 11:28:58 2018 -0700
+
+    added favorite movie to aboutMe
+
+commit 1b24d853ba08c1a7f5a527139a013e511c259484
+Author: Amandeep Singh <amansingh@Amandeeps-MacBook-Pro.local>
+Date:   Tue Mar 20 11:19:38 2018 -0700
+
+    first commit
+Amandeeps-MacBook-Pro:gittest amansingh$ git revert b1447f68834d6e84f6385507752bbffc53f4065d
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Amandeeps-MacBook-Pro:gittest amansingh$ git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+Amandeeps-MacBook-Pro:gittest amansingh$ git add .
+Amandeeps-MacBook-Pro:gittest amansingh$ git commit m- 'changed to bio me'
+error: pathspec 'm-' did not match any file(s) known to git.
+error: pathspec 'changed to bio me' did not match any file(s) known to git.
+Amandeeps-MacBook-Pro:gittest amansingh$ vi aboutMe.txt
+Amandeeps-MacBook-Pro:gittest amansingh$ git revert 33dd7c192c39bccb0765728f3c8b0887ba333bc6
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
